@@ -1,0 +1,8 @@
+{
+  "name": "exciting-visualization",
+  "private": true,
+  "dependencies": {
+    "shower-core": "^2.1.0",
+    "shower-ribbon": "^3.1.4"
+  }
+}
