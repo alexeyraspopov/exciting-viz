@@ -64,6 +64,13 @@
       </p>
     </section>
 
+    <section class="slide darkside">
+      <img src="pictures/viz-1.png" height="50%" class="place top right" />
+      <img src="pictures/viz-2.png" height="50%" class="place top left" />
+      <img src="pictures/viz-4.png" height="50%" class="place bottom left" />
+      <img src="pictures/viz-3.png" height="50%" class="place bottom right" />
+    </section>
+
     <section class="slide blueprint">
       <pre>
         <code>[0.7300683106640126, -0.4606999589484973, 0.063843341998,</code>
@@ -228,11 +235,19 @@
       </p>
     </section>
 
+    <section class="slide">
+      <p class="title">
+        But how do I <em class="accent">read</em> <br />what I
+        <em class="accent">see</em>?
+      </p>
+    </section>
+
     <section class="slide darkside">
       <p>
         <strong>Axis</strong> — a composition of
         <em class="accent">human-readable</em> reference marks for
-        <strong>scales</strong>.
+        <strong>scales</strong>. Help defining <br />the
+        <em class="accent">coordinate system</em> for your data viz.
       </p>
     </section>
 
@@ -374,8 +389,12 @@
     </section>
 
     <section class="slide blueprint">
-      <!-- build axis -->
-      <!-- here -->
+      <pre>
+        <code>let ticks = [3, 2, 1, 0, -1, -2, -3];</code>
+        <code>let marks = ticks.<span class="accent-2">map</span>(tick => (</code>
+        <code>  &lt;<span class="accent">text</span> y={<span class="accent-2">scaleY</span>(tick)}&gt;{<em>tick</em>}&lt;/<span class="accent">text</span>&gt;</code>
+        <code>));</code>
+      </pre>
     </section>
 
     <section class="slide darkside">
@@ -388,6 +407,14 @@
         playsinline
         class="cover w"
       ></video>
+    </section>
+
+    <section class="slide">
+      <p>
+        Interactive visualizations allow <br />users
+        <em class="accent">to explore</em> what they see, <br />going beyond
+        static images.
+      </p>
     </section>
 
     <section class="slide">
@@ -561,6 +588,39 @@
           </text>
         </g>
       </svg>
+    </section>
+
+    <section class="slide">
+      <p>
+        Since pointer events give you <em class="accent">visual value</em>,
+        <br />use inverse scale to find corresponding
+        <em class="accent">domain value</em>.
+      </p>
+    </section>
+
+    <section class="slide blueprint">
+      <pre>
+        <code>let scaleX = scaleLinear([0, 50], [0, width]);</code>
+        <code>let invScaleX = scaleLinear([0, width], [0, 50]);</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>Summary</h2>
+      <ul>
+        <li>Know your <em class="accent">data</em></li>
+        <li class="next">
+          Start with fundamentals and tools <br />that
+          <em class="accent">convenient</em> for you
+        </li>
+        <li class="next">
+          Make sure you put enough <em class="accent">annotation</em>
+        </li>
+        <li class="next">
+          Make it interactive to provide <br />the ability to
+          <em class="accent">explore</em>
+        </li>
+      </ul>
     </section>
 
     <section class="slide">
